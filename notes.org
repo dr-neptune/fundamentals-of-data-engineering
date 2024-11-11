@@ -1,0 +1,99 @@
+#+TITLE: Book Notes for Fundamentals of Data Engineering
+
+* 1. Data Engineering Described
+
+The data engineering lifecycle:
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 17:23:05
+[[file:1._Data_Engineering_Described/2024-11-10_17-23-05_screenshot.png]]
+
+
+- generation
+- storage
+- ingestion
+- transformation
+- serving
+
+* 2. The Data Engineering Lifecycle
+
+** Storage
+
+Often the most difficult part of the data lifecycle.
+
+*** Key Engineering Considerations
+
+- compatible read / write speeds?
+- will it create a bottleneck downstream?
+- Do we understand how this works? Are we using this optimally or
+  committing unnatural acts? (consider databricks for running python
+  scripts.)
+- will it handle expected future scale needs?
+- will downstream users be able to access it?
+- are we able to capture metadata about schema evolution, data flows,
+  data lineage, and so forth?
+- is it purely storage, or does it support complex query patterns?
+- is it schema-agnostic (object storage)? flexible schema (cassandra
+  db)? enforced schema (a cloud data warehouse)?
+- how are we tracking master data, golden records data quality, and
+  data lineage for data governance?
+- how are we handling regulatory compliance and data sovereignty?
+
+** Ingestion
+
+Once we understand the data source, we need to gather data. The next
+stage is data ingestion from source systems.
+
+*** Key Engineering Considerations
+
+- What are the use cases for the data we're ingesting? Can I reuse
+  this data rather than create multiple versions of the same dataset
+- Are the systems generating and ingesting this data reliably? Is the
+  data available when I need it?
+- What is the data destination after ingestion?
+- How frequently will I need to access the data?
+- In what volume will the data typically arrive?
+- What format is the data in? My can storage and transformation
+  systems use this format?
+
+** Transformation
+
+Data needs to be transforamed from it's original form into something
+useful for downstream use cases.
+
+*** Key Engineering Considerations
+
+- What's the cost and ROI of the transformation?
+- Is the transformation as simple and self-isolated as possible?
+- What business rules do the transformations support?
+
+** Serving Data
+
+This is where we get value from our data.
+
+Maybe we consider reverse ETL as well?
+
+
+** Undercurrents
+
+
+#+DOWNLOADED: screenshot @ 2024-11-11 13:38:07
+[[file:2._The_Data_Engineering_Lifecycle/2024-11-11_13-38-07_screenshot.png]]
+
+Data Management Body of Knowledge identifies 4 main categories of
+metadata that are useful to data engineers:
+
+- business
+- technical
+- operational
+- reference
+
+** DataOps
+
+DataOps has 3 core technical elements:
+
+#+DOWNLOADED: screenshot @ 2024-11-11 13:52:33
+[[file:2._The_Data_Engineering_Lifecycle/2024-11-11_13-52-33_screenshot.png]]
+
+
+* 3. Designing Good Data Architecture
