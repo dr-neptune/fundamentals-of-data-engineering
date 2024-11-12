@@ -97,3 +97,65 @@ DataOps has 3 core technical elements:
 
 
 * 3. Designing Good Data Architecture
+
+> Enterprise architecture is the design of systems to support change
+  in the enterprise, achieved by flexible and reversible decisions
+  reached through careful evaluation of trade-offs.
+
+> technical solutions exist not for their own sake but in support of
+  business goals
+
+*Operational architecture* encompasses the functional requirements of
+what needs to happen related to people, processes, and technology. For
+example, what business process does the data serve?
+
+*Technical architecture* outlines how data is ingested, stored,
+transformed, and served alongside the data engineering lifecycle.
+
+
+#+BEGIN_QUOTE
+Never shoot for the best architecture, but rather the least worst
+architecture - Mark Richards and Neal Ford
+#+END_QUOTE
+
+
+** Principles of Good Data Architecture
+
+1. Choose common components wisely.
+2. Plan for failure.
+3. Architect for scalability.
+4. Architecture is leadership.
+5. Always be architecting.
+6. Build loosely coupled systems.
+7. Make reversible decisions.
+8. Prioritize security.
+9. Embrace FinOps.
+
+** Examples and Types of Data Architecture
+*** Data Warehouse
+a subject-oriented, integrated, non-volatile, and time-variant
+collection of data in support of management's decisions.
+
+
+The organizational data warehouse architecture has 2 main
+characteristics:
+- separates online analytical processing (OLAP) from production
+  databases (OLTP)
+- centralizes and organizes data
+
+*** Data Mart
+
+A data mart is a more refined subset of a warehouse designed to serve
+analytics and reporting, focused on a single sub-organization,
+department, or line of business.
+
+*** Data Lake
+
+Instead of imposing tight structural limitations on data, just dump it
+into a central location.
+
+*** Modern Data Stack
+
+
+#+DOWNLOADED: screenshot @ 2024-11-12 17:20:47
+[[file:3._Designing_Good_Data_Architecture/2024-11-12_17-20-47_screenshot.png]]
